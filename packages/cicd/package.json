@@ -1,0 +1,52 @@
+{
+  "name": "cicd",
+  "version": "0.1.0",
+  "bin": {
+    "cicd": "bin/cicd.js"
+  },
+  "scripts": {
+    "build": "nx exec -- tsc",
+    "watch": "nx exec -- tsc -w",
+    "test": "nx exec -- jest",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "bootstrap": "cdk bootstrap"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "aws-cdk": "2.21.1",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7",
+    "nx": "15.9.2",
+    "@nrwl/nx-cloud": "latest"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.21.1",
+    "cdk-pipelines-github": "^0.4.18",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/dist"
+        ]
+      },
+      "watch": {
+        "outputs": [
+          "{projectRoot}/dist"
+        ]
+      },
+      "test": {
+        "outputs": [
+          "{projectRoot}/dist"
+        ]
+      }
+    }
+  }
+}

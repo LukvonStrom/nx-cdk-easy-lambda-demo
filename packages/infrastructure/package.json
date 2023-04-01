@@ -1,0 +1,51 @@
+{
+  "name": "@lukvvonstrom/aws-infrastructure",
+  "version": "0.1.0",
+  "bin": {
+    "infrastructure": "bin/infrastructure.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "nx exec -- cdk",
+    "synth": "nx exec -- cdk synthesize",
+    "bootstrap": "nx exec -- cdk bootstrap",
+    "deploy": "nx exec -- cdk deploy"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "aws-cdk": "2.21.1",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7",
+    "nx": "15.9.2",
+    "@nrwl/nx-cloud": "latest"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.21.1",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
+  },
+  "nx": {
+    "targets": {
+      "synth": {
+        "outputs": [
+          "{projectRoot}/cdk.out"
+        ]
+      },
+      "bootstrap": {
+        "outputs": [
+          "{projectRoot}/cdk.out"
+        ]
+      },
+      "deploy": {
+        "outputs": [
+          "{projectRoot}/cdk.out"
+        ]
+      }
+    }
+  }
+}

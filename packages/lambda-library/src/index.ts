@@ -1,1 +1,1 @@
-export * from './lib/lambda-library';
+export * from './lib/lambda-library.js';

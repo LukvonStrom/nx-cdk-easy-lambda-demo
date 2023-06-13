@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.306.0",
-    "@aws-sdk/client-s3": "^3.306.0",
-    "@aws-sdk/client-xray": "^3.306.0"
+    "@aws-sdk/client-dynamodb": "^3.351.0",
+    "@aws-sdk/client-s3": "^3.350.0",
+    "@aws-sdk/client-xray": "^3.350.0"
   }
 }
